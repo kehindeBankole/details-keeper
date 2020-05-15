@@ -7,7 +7,7 @@ states.forEach((element) => {
     <option value=${element} id=${element}>${element}</option> 
     `
 })
-
+s
 const fd = document.getElementById("state").children
 for (var i = 0; i < fd.length; i++) {
     console.log( document.getElementById(`${fd[i].id}`) )
