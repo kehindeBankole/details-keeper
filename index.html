@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body onload="fetch()">
+    <div class="container mt-5">
+        <form id="myform">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fname">first name</label>
+                    <input type="text" class="form-control" id="fname" placeholder="first name" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lname">last name</label>
+                    <input type="text" class="form-control" id="lname" placeholder="last name" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">email</label>
+                <input type="email" class="form-control" id="email" placeholder="example@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+            </div>
+            <div class="form-group">
+                <label for="school">school of choice</label>
+                <input type="text" class="form-control" id="school" placeholder="desired university" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="state">State of origin</label>
+                    <select id="state" class="form-control">
+                        <!-- <option selected>Choose...</option>
+                        <option>lagos state</option> -->
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <table class="table" id="table"></table>
+    </div>
+    <div class="mymodal" id="mymodal">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">ERROR</h1>
+                <h4 class="card-text">Email exists already</h4>
+                <p>please enter another email</p>
+                <a href="#" class="btn btn-danger" id="close">close</a>
+              </div>
+          </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>

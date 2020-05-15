@@ -1,0 +1,20 @@
+body{
+   font-family : monospace;
+}
+.mymodal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+.mymodal .card{
+    width:50%;
+    top:50% !important;
+    left:50% !important;
+    transform: translate(-50% , -50%) !important;
+}
