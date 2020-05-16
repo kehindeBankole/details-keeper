@@ -8,7 +8,6 @@ states.forEach((element) => {
     `
 })
 
-
 form.addEventListener("submit", (e) => {
     const fname = document.getElementById("fname").value
     const lname = document.getElementById("lname").value
