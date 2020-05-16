@@ -34,20 +34,18 @@ form.addEventListener("submit", (e) => {
     } else {
         const detailsfromstore = JSON.parse(localStorage.getItem("details"))
         detailsfromstore.push(details)
-        const dt = JSON.parse(localStorage.getItem("details"))
-        const ag = []
-        for (let i = 0; i < dt.length; i++) {
-            ag.push(dt[i].email)
+        const detailsfromstoreaftervalueadded = JSON.parse(localStorage.getItem("details"))
+        const emailfromstore = []
+        for (let i = 0; i < detailsfromstoreaftervalueadded.length; i++) {
+            emailfromstore.push(detailsfromstoreaftervalueadded[i].email)
         }
-        if (ag.includes(email)) {
-            console.log("email already exist")
+        if (emailfromstore.includes(email)) {
             modal.style.display = "block"
             e.preventDefault()
             return false
         } else {
             localStorage.setItem("details", JSON.stringify(detailsfromstore))
         }
-        console.log(detailsfromstore)
     }
     fetch()
     e.preventDefault()
@@ -87,6 +85,5 @@ const fetch = () => {
     }
 
 }
-closebtn.addEventListener("click", () => {
-    modal.style.display = "none"
-})
+closebtn.addEventListener("click", () => modal.style.display = "none")
+window.addEventListener("click", () => modal.style.display = "none")
