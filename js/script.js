@@ -7,25 +7,23 @@ states.forEach((element) => {
     <option value=${element} id=${element}>${element}</option> 
     `
 })
-s
-const fd = document.getElementById("state").children
-for (var i = 0; i < fd.length; i++) {
-    console.log( document.getElementById(`${fd[i].id}`) )
 
-}
+
 form.addEventListener("submit", (e) => {
     const fname = document.getElementById("fname").value
     const lname = document.getElementById("lname").value
     const email = document.getElementById("email").value
     const address = document.getElementById("address").value
     const school = document.getElementById("school").value
+    const selectedstate = document.getElementById("state").options[document.getElementById("state").selectedIndex].text
 
     const details = {
         fname: fname,
         lname: lname,
         email: email,
         school: school,
-        address: address
+        address: address,
+        state: selectedstate,
     }
 
     if (localStorage.getItem("details") === null) {
@@ -67,6 +65,7 @@ const fetch = () => {
           <th scope="col">email</th>
           <th scope="col">adress</th>
           <th scope="col">school</th>
+          <th scope="col">state</th>
         </tr>
       </thead>
       <tbody id="body"> 
@@ -82,6 +81,7 @@ const fetch = () => {
          <td>${element.email}</td>
          <td>${element.address}</td>
          <td>${element.school}</td>
+         <td>${element.state}</td>
        </tr>`
         });
     }
