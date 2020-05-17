@@ -1,7 +1,7 @@
 const form = document.getElementById("myform")
 const modal = document.getElementById("mymodal")
 const closebtn = document.getElementById("close")
-const states = ["lagos", "ogun", "ibadan"]
+const states = ["lagos", "ogun", "ibadan", "calabar", "anambra", "kwara", "kaduna"]
 states.forEach((element) => {
     document.getElementById("state").innerHTML += `
     <option value=${element} id=${element}>${element}</option> 

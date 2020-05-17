@@ -1,7 +1,19 @@
-body{
-   font-family : monospace;
+*{
+    margin: 0;
+    padding: 0;
 }
-.mymodal{
+body {
+    font-family: monospace;
+    background-color: hsl(230, 17%, 14%);
+    color : white;
+}
+.navbar{
+    background-color: hsl(232, 19%, 15%);
+}
+table tr{
+    color : white;
+}
+.mymodal {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,10 +23,12 @@ body{
     height: 100%;
     z-index: 1;
     display: none;
+    color:black;
 }
-.mymodal .card{
-    width:50%;
-    top:50% !important;
-    left:50% !important;
-    transform: translate(-50% , -50%) !important;
+
+.mymodal .card {
+    width: 50%;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
 }

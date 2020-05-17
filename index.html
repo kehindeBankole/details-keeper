@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="SuperheroesWallpapersHD4k4.jpg"/>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
 
 <body onload="fetch()">
+
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h3 class="text-white">AlphaBeta</h3>
+            </a>
+        </div>
+    </nav>
+
     <div class="container mt-5">
         <form id="myform">
             <div class="form-row">
@@ -44,8 +54,8 @@
         </form>
     </div>
 
-    <div class="container">
-        <table class="table" id="table"></table>
+    <div class="container mt-5">
+        <table class="table table-responsive-sm table-responsive-md" id="table"></table>
     </div>
     <div class="mymodal" id="mymodal">
         <div class="card">
@@ -54,8 +64,8 @@
                 <h4 class="card-text">Email exists already</h4>
                 <p>please enter another email</p>
                 <a href="#" class="btn btn-danger" id="close">close</a>
-              </div>
-          </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="js/script.js"></script>
