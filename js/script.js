@@ -86,3 +86,20 @@ const fetch = () => {
 }
 closebtn.addEventListener("click", () => modal.style.display = "none")
 window.addEventListener("click", () => modal.style.display = "none")
+
+document.getElementById("search").addEventListener("keyup", () => {
+    const tr = document.getElementsByTagName("tr")
+    const input = document.getElementById("search")
+    var filter = input.value.toUpperCase()
+    for (let i = 1; i < tr.length; i++) {
+        const td = tr[i].getElementsByTagName('td')[0]
+        if (td) {
+            const txtvalue = td.textContent || td.innerText
+            if (txtvalue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = ""
+            } else {
+                tr[i].style.display = "none"
+            }
+        }
+    }
+})
